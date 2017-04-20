@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
+
+nav, ui-view {
+  margin: 20px;
+}
+
+ui-view {
+  width: 80%;
+  min-width: 300px;
+}
+
+a {
+  text-decoration: none;
+  float: right;
+}
+
+.sidebar {
+  background-color: #efefef;
+  margin-right: 20px;
+  height: 100vh;
+}
+
+.container li {
+  height: 25px;
+}
+
+.actions {
+  display: inline-block;
+  float: right;
+}
+
+.actions a {
+  margin-left: 10px;
+}
+
+.save {
+  float: left;
+}
