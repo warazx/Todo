@@ -1,11 +1,13 @@
-<label ng-click="addTodo()">+ Lägg till</label>
-<ul class="container" ng-repeat="todo in todos">
-  <li>
-    <label ng-hide="editing" ng-click="editing = true">{{todo.task}}</label>
-    <input ng-model="todo.task" ng-show="editing" ng-blur="editing = false" type="text"/>
-    <div class="actions">
-      <a class="save" ng-click="editing = false" ng-show="editing" href="">Spara</a>
-      <a class="remove" ng-click="removeTodo($index)" href="">Ta Bort</a>
-    </div>
-  </li>
-</ul>
+<section>
+  <label ng-click="addTodo()">+ Lägg till</label>
+  <ul class="container" ng-repeat="todo in todos">
+    <li>
+      <label ng-hide="editing" ng-click="editing = true">{{todo.task}}</label>
+      <input ng-model="todo.task" ng-show="editing" ng-blur="editing = false" type="text"/>
+      <div class="actions">
+        <a class="save" ng-click="editing = false" ng-show="editing" href="">Spara</a>
+        <a class="remove" ng-click="removeTodo($index)" href="">Ta Bort</a>
+      </div>
+    </li>
+  </ul>
+</section>

@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router'])
+angular.module('app', ['ui.router', 'chart.js'])
 .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/home")
 
@@ -13,9 +13,13 @@ angular.module('app', ['ui.router'])
         url: '/stats'
     });
 })
-.controller('StatsCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
-
-}])
+.directive('statistics', function() {
+  return {
+    controller: 'StatsCtrl',
+    template: 'Antal: {{todos.length}}'
+    };
+})
+.controller('StatsCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {}])
 .controller('HomeCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
   if(!$rootScope.todos) {
       $rootScope.todos = [
