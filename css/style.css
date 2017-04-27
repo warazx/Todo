@@ -41,3 +41,8 @@ a {
 .save {
   float: left;
 }
+
+.chart {
+  height: 500px !important;
+  width: 500px !important;
+}

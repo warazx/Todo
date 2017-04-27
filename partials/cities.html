@@ -1,0 +1,12 @@
+<section>
+  <label>Lägg till:</label>
+  <form>
+    Stad:<input type="text" ng-model="city.name" required/>
+    Population:<input type="number" ng-model="city.population" required/>
+    <button ng-click="addCity(city)">Lägg till</button>
+  </form>
+  <p/>
+  <div ng-repeat="city in cities">
+    {{city.name}} - {{city.population}}
+  </div>
+</section>
