@@ -52,8 +52,8 @@ angular.module('app', ['ui.router', 'chart.js'])
   $scope.addCity = function(city) {
     if(city.name.length > 0 && city.population >= 0) {
       citiesManager.addCity(city);
-      updateCities();
     }
+    updateCities();
   };
 
    function updateCities() {
